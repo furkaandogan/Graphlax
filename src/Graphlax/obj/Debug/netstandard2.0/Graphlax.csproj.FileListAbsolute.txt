@@ -1,0 +1,16 @@
+C:\Users\dogan\OneDrive\Masaüstü\graphlax\src\Graphlax\obj\Debug\netstandard2.0\Graphlax.csproj.CoreCompileInputs.cache
+C:\Users\dogan\OneDrive\Masaüstü\graphlax\src\Graphlax\obj\Debug\netstandard2.0\Graphlax.AssemblyInfoInputs.cache
+C:\Users\dogan\OneDrive\Masaüstü\graphlax\src\Graphlax\obj\Debug\netstandard2.0\Graphlax.AssemblyInfo.cs
+C:\Users\dogan\OneDrive\Masaüstü\graphlax\src\Graphlax\bin\Debug\netstandard2.0\Graphlax.deps.json
+C:\Users\dogan\OneDrive\Masaüstü\graphlax\src\Graphlax\bin\Debug\netstandard2.0\Graphlax.dll
+C:\Users\dogan\OneDrive\Masaüstü\graphlax\src\Graphlax\bin\Debug\netstandard2.0\Graphlax.pdb
+C:\Users\dogan\OneDrive\Masaüstü\graphlax\src\Graphlax\obj\Debug\netstandard2.0\Graphlax.dll
+C:\Users\dogan\OneDrive\Masaüstü\graphlax\src\Graphlax\obj\Debug\netstandard2.0\Graphlax.pdb
+D:\Worksapce\graphlax\src\Graphlax\bin\Debug\netstandard2.0\Graphlax.deps.json
+D:\Worksapce\graphlax\src\Graphlax\bin\Debug\netstandard2.0\Graphlax.dll
+D:\Worksapce\graphlax\src\Graphlax\bin\Debug\netstandard2.0\Graphlax.pdb
+D:\Worksapce\graphlax\src\Graphlax\obj\Debug\netstandard2.0\Graphlax.csproj.CoreCompileInputs.cache
+D:\Worksapce\graphlax\src\Graphlax\obj\Debug\netstandard2.0\Graphlax.AssemblyInfoInputs.cache
+D:\Worksapce\graphlax\src\Graphlax\obj\Debug\netstandard2.0\Graphlax.AssemblyInfo.cs
+D:\Worksapce\graphlax\src\Graphlax\obj\Debug\netstandard2.0\Graphlax.dll
+D:\Worksapce\graphlax\src\Graphlax\obj\Debug\netstandard2.0\Graphlax.pdb
