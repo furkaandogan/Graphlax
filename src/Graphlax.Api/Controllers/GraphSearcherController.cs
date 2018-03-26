@@ -1,5 +1,6 @@
 using System;
 using Graphlax.Api.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Graphlax.Api.Controllers
 {
@@ -11,9 +12,16 @@ namespace Graphlax.Api.Controllers
 
         }
 
-        public GraphSearcherResponse Index(string url)
+        [HttpGet("graph")]
+        public GraphObject Index(string url)
         {
-            throw new NotImplementedException();
+            DefaultGraphSearcher defaultGraphSearcher=new DefaultGraphSearcher();
+            return defaultGraphSearcher.Search(new Uri(url));
+        }
+        [HttpGet("engine/graph")]
+        public GraphObject Engine(string url)
+        {
+            return new Engine.GrapherEngine().Read(new Uri(url));
         }
         
     }
