@@ -20,8 +20,7 @@ namespace Graphlax.Engine
             object graphObject=Activator.CreateInstance(graphType);
             PropertyInfo[] properties = graphType.GetProperties()
                 .Where(x=>Attribute.IsDefined(x,typeof(GraphElementAttribute))).ToArray();
-            HtmlDocument htmlDocument=new HtmlWeb()
-                .Load(uri);
+            HtmlDocument htmlDocument=HtmlClient.LoadDocument(uri);
             foreach(PropertyInfo prop in properties){
                 if(prop.PropertyType.IsClass && (prop.PropertyType.Module.Name.Contains("Graphlax"))){
                      prop.SetValue(graphObject,GetSubPropValue(prop.PropertyType,htmlDocument));

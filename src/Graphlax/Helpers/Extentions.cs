@@ -50,6 +50,8 @@ namespace Graphlax.Helpers
         {
             if(uri.ToString().Contains("imdb.com"))
                 return typeof(IMDB.IMDBGraphObject);
+            else if(uri.ToString().Contains("store.steampowered.com"))
+                return typeof(Steam.SteamGraphObject);
             return typeof(GraphObject);
         }
     }
