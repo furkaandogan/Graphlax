@@ -16,6 +16,7 @@ namespace Graphlax.IMDB
             this.Type=graphObject.Type;
             this.Url=graphObject.Url;
         }
+        [GraphElement]
         public Film Info { get; set; }
     }
 }
