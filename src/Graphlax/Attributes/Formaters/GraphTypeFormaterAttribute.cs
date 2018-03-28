@@ -1,6 +1,6 @@
 using System;
 
-namespace Graphlax
+namespace Graphlax.Attributes.Formaters
 {
     [AttributeUsage(AttributeTargets.Property, Inherited = false, AllowMultiple = true)]
     public sealed class GraphTypeFormaterAttribute : Attribute
@@ -8,15 +8,6 @@ namespace Graphlax
      
         
         public GraphTypeFormaterAttribute()
-        {
-        }
-    }
-    [AttributeUsage(AttributeTargets.Property, Inherited = false, AllowMultiple = true)]
-    public sealed class IntegerFormaterAttribute : Attribute
-    {
-     
-        
-        public IntegerFormaterAttribute()
         {
         }
     }

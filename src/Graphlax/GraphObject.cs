@@ -1,5 +1,7 @@
 using System;
-using static Graphlax.GraphElementAttribute;
+using Graphlax.Attributes;
+using Graphlax.Attributes.Formaters;
+using static Graphlax.Attributes.GraphElementAttribute;
 
 namespace Graphlax
 {

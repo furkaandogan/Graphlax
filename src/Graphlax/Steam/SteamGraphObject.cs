@@ -1,3 +1,5 @@
+using Graphlax.Attributes;
+
 namespace Graphlax.Steam
 {
     public class SteamGraphObject

@@ -17,6 +17,7 @@ namespace Graphlax.Helpers
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri);
             request.Method = "GET";
             request.CookieContainer = cookies;
+            request.Headers.Set("Accept-Language","tr-TR");
 
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
             Stream stream = response.GetResponseStream();

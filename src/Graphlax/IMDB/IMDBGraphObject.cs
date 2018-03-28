@@ -1,3 +1,7 @@
+using Graphlax.Attributes;
+using Graphlax.Attributes.Formaters;
+using static Graphlax.Attributes.GraphElementAttribute;
+
 namespace Graphlax.IMDB
 {
     public class IMDBGraphObject

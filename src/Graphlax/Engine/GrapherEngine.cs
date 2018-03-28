@@ -3,11 +3,14 @@ using System.Linq;
 using System.Reflection;
 using Graphlax.Helpers;
 using HtmlAgilityPack;
-using static Graphlax.GraphElementAttribute;
+using Graphlax.Attributes;
+using Graphlax.Attributes.Formaters;
+using static Graphlax.Attributes.GraphElementAttribute;
 
 namespace Graphlax.Engine
 {
     public sealed class GrapherEngine
+        :IGraphEngine
     {
         public GrapherEngine()
         {

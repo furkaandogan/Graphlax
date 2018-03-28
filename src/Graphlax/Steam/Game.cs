@@ -1,4 +1,5 @@
-using static Graphlax.GraphElementAttribute;
+using Graphlax.Attributes;
+using static Graphlax.Attributes.GraphElementAttribute;
 
 namespace Graphlax.Steam
 {
