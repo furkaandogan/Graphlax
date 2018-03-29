@@ -3,7 +3,7 @@ using System.IO;
 using System.Net;
 using HtmlAgilityPack;
 
-namespace Graphlax.Helpers
+namespace Graphlax.Utilities.Net
 {
     public class HtmlClient
     {
