@@ -6,6 +6,8 @@ using HtmlAgilityPack;
 using Graphlax.Attributes;
 using Graphlax.Attributes.Formaters;
 using static Graphlax.Attributes.GraphElementAttribute;
+using Graphlax.Utilities.Net;
+using System.Threading.Tasks;
 
 namespace Graphlax.Engine
 {
@@ -17,7 +19,7 @@ namespace Graphlax.Engine
 
         }
 
-        public GraphObject Read(Uri uri)
+        public async Task<GraphObject> ReadAsync(Uri uri)
         {
             Type graphType=uri.ToGraphType();
             object graphObject=Activator.CreateInstance(graphType);

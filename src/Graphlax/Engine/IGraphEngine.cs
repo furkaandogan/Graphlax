@@ -1,9 +1,10 @@
 using System;
+using System.Threading.Tasks;
 
 namespace Graphlax.Engine
 {
     public interface IGraphEngine
     {
-        GraphObject Read(Uri uri);
+        Task<GraphObject> ReadAsync(Uri uri);
     }
 }

@@ -1,5 +1,7 @@
 using System;
+using System.Threading.Tasks;
 using Graphlax.IMDB;
+using Graphlax.Steam;
 using Xunit;
 
 namespace Graphlax.Test
@@ -14,10 +16,11 @@ namespace Graphlax.Test
 
         [Theory]
         [InlineData("http://ogp.me/")]
-        public void Ogp(string url)
+        public async Task OgpAsync(string url)
         {
             Uri uri=new Uri(url);
-            GraphObject graphObject=_grapherEnginer.Read(uri);
+            GraphObject graphObject=await _grapherEnginer.ReadAsync(uri);
+
             Console.Write(graphObject.Title);
             Assert.NotNull(graphObject);
             Assert.Equal(graphObject.Title,"Open Graph protocol");
@@ -36,11 +39,11 @@ namespace Graphlax.Test
         }
         [Theory]
         [InlineData("http://www.imdb.com/title/tt1677720/?ref_=inth_ov_tt")]
-        public void IMDB(string url)
+        public async Task IMDBAsync(string url)
         {
             Uri uri=new Uri(url);
-            IMDBGraphObject graphObject=(IMDBGraphObject)_grapherEnginer.Read(uri);
-            Console.Write(graphObject.Title);
+            IMDBGraphObject graphObject=(IMDBGraphObject) await _grapherEnginer.ReadAsync(uri);
+
             Assert.NotNull(graphObject);
             Assert.Equal(graphObject.Title,"Ready Player One (2018)");
             Assert.Equal(graphObject.Type,GraphType.WEB_SITE);
@@ -57,7 +60,7 @@ namespace Graphlax.Test
             Assert.Equal(graphObject.Site.IP,"127.0.0.1");
 
             Assert.NotNull(graphObject.Info);
-            // Assert.Equal(graphObject.Info.Name,"Ready Player One");
+            Assert.Equal(graphObject.Info.Name,"Ready Player One (2018)");
             Assert.Equal(graphObject.Info.AVGRating,"8.0");
             Assert.Equal(graphObject.Info.Duraction,"2h 20min");
             Assert.Equal(graphObject.Info.MaxRating,"10");
