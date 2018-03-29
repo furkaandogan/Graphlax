@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using Graphlax.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,9 +20,9 @@ namespace Graphlax.Api.Controllers
             return defaultGraphSearcher.Search(new Uri(url));
         }
         [HttpGet("engine/graph")]
-        public GraphObject Engine(string url)
+        public async Task<GraphObject> EngineAsync(string url)
         {
-            return new Engine.GrapherEngine().Read(new Uri(url));
+            return await new Engine.GrapherEngine().ReadAsync(new Uri(url));
         }
         
     }

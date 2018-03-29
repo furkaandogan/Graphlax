@@ -1,13 +1,14 @@
 using System;
 using System.IO;
 using System.Net;
+using System.Threading.Tasks;
 using HtmlAgilityPack;
 
 namespace Graphlax.Utilities.Net
 {
     public class HtmlClient
     {
-        public static HtmlDocument LoadDocument(Uri uri){
+        public async static Task<HtmlDocument> LoadDocumentAsync(Uri uri){
             CookieContainer cookies=new CookieContainer();
             Cookie cookie=new Cookie("mature_content","/");
             cookie.Domain=uri.Host;
@@ -19,7 +20,7 @@ namespace Graphlax.Utilities.Net
             request.CookieContainer = cookies;
             request.Headers.Set("Accept-Language","tr-TR");
 
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            HttpWebResponse response = (HttpWebResponse) await request.GetResponseAsync();
             Stream stream = response.GetResponseStream();
 
             HtmlDocument htmlDocument=new HtmlDocument();
