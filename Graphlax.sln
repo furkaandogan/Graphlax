@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphlax.Test", "tests\Grap
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4C4B90E7-90DA-437B-8791-069E171FB07D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphlax.Web.Api", "src\Graphlax.Web.Api\Graphlax.Web.Api.csproj", "{4DD39ED5-F15D-4346-B21B-035C2241E0DE}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphlax.Validators", "src\Graphlax.Validators\Graphlax.Validators.csproj", "{918C6330-F29F-4F9E-9815-1D536BA7D6F1}"
 EndProject
 Global

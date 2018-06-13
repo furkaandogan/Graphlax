@@ -67,5 +67,33 @@ namespace Graphlax.Test
             Assert.NotEqual(graphObject.Info.TotalRatingCount,null);
             Assert.Equal(graphObject.Info.VisionYear,"2018");
         }
+        [Theory]
+        [InlineData("")]
+        public async Task SteamAsync(string url)
+        {
+            Uri uri =new Uri(url);
+            SteamGraphObject graphObject=(SteamGraphObject) await _grapherEnginer.ReadAsync(uri);
+            
+            Assert.NotNull(graphObject);
+            Assert.Equal(graphObject.Title,"Ready Player One (2018)");
+            Assert.Equal(graphObject.Type,GraphType.WEB_SITE);
+            Assert.Equal(graphObject.Description,"");
+            Assert.Equal(graphObject.Url,uri.ToString());
+            Assert.NotNull(graphObject.Image);
+            Assert.Equal(graphObject.Image.Alt,null);
+            Assert.Equal(graphObject.Image.Url,"");
+            Assert.Equal(graphObject.Image.Width,0);
+            Assert.Equal(graphObject.Image.Heigth,0);
+            Assert.NotNull(graphObject.Site);
+            Assert.Equal(graphObject.Site.Title,"");
+            Assert.Equal(graphObject.Site.Name,"");
+            Assert.Equal(graphObject.Site.IP,"127.0.0.1");
+
+            Assert.NotNull(graphObject.Info);
+            Assert.Equal(graphObject.Info.Name,"");
+            Assert.Equal(graphObject.Info.Price,"");
+            Assert.Equal(graphObject.Info.Description,"");
+
+        }
     }
 }

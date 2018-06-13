@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 
 namespace Graphlax.Service
 {
@@ -6,17 +7,19 @@ namespace Graphlax.Service
         :IGraphService
     {
         private readonly Engine.IGraphEngine _graphEngine;
-        public GraphService(Engine.IGraphEngine graphEngine)
+        private readonly IDataProvider _tempDataProvider;
+        public GraphService(Engine.IGraphEngine graphEngine,IDataProvider tempDataProvider)
         {
             _graphEngine=graphEngine;
+            _tempDataProvider=tempDataProvider;
         }
 
-        public GraphObject Get(Uri uri)
+        public async Task<GraphObject> GetAsync(Uri uri)
         {
-            GraphObject graphObject=null;
-            
+            GraphObject graphObject=await _tempDataProvider.GetGraphAsync(uri);
             if(graphObject==null){
-                graphObject=_graphEngine.Read(uri);
+                graphObject=await _graphEngine.ReadAsync(uri);
+
             }
             return graphObject;
         }

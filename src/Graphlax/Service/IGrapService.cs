@@ -1,10 +1,11 @@
 using System;
+using System.Threading.Tasks;
 
 namespace Graphlax.Service
 {
     public interface IGraphService
     {   
-        GraphObject Get(Uri uri);
+        Task<GraphObject> GetAsync(Uri uri);
         
     }
 }
