@@ -8,22 +8,22 @@ namespace Graphlax.IMDB
     {
         
         
-        [GraphElement("//*[@id='title-overview-widget']/div[2]/div[2]/div/div[2]/div[2]/h1",ValueReadType.INNER_TEXT)]
+        [GraphElement("//*[@id='__next']/main/div/section[1]/section/div[3]/section/section/div[1]/div[1]/h1",ValueReadType.INNER_TEXT)]
         public string Name { get; set; }
 
-        [GraphElement("//*[@id='title-overview-widget']/div[2]/div[2]/div/div[2]/div[2]/div/time",ValueReadType.INNER_TEXT)]
+        [GraphElement("/html/body/div[2]/main/div/section[1]/section/div[3]/section/section/div[1]/div[1]/div[2]/ul/li[3]",ValueReadType.INNER_TEXT)]
         public string Duraction { get; set; }
         
-        [GraphElement("//*[@id='title-overview-widget']/div[2]/div[2]/div/div[1]/div[1]/div[1]/strong/span",ValueReadType.INNER_TEXT)]
+        [GraphElement("/html/body/div[2]/main/div/section[1]/section/div[3]/section/section/div[3]/div[2]/div[1]/div[2]/div/div[1]/a/div/div/div[2]/div[1]/span[1]",ValueReadType.INNER_TEXT)]
         public string AVGRating { get; set; }
         
-        [GraphElement("//*[@id='title-overview-widget']/div[2]/div[2]/div/div[1]/div[1]/div[1]/span[2]",ValueReadType.INNER_TEXT)]
+        [GraphElement("/html/body/div[2]/main/div/section[1]/section/div[3]/section/section/div[3]/div[2]/div[1]/div[2]/div/div[1]/a/div/div/div[2]/div[1]/span[2]",ValueReadType.INNER_TEXT)]
         public string MaxRating { get; set; }
         
-        [GraphElement("//*[@id='title-overview-widget']/div[2]/div[2]/div/div[1]/div[1]/a/span",ValueReadType.INNER_TEXT)]
+        [GraphElement("/html/body/div[2]/main/div/section[1]/section/div[3]/section/section/div[3]/div[2]/div[1]/div[2]/div/div[1]/a/div/div/div[2]/div[3]",ValueReadType.INNER_TEXT)]
         public string TotalRatingCount { get; set; }
         
-        [GraphElement("//*[@id='titleYear']/a",ValueReadType.INNER_TEXT)]
+        [GraphElement("/html/body/div[2]/main/div/section[1]/section/div[3]/section/section/div[1]/div[1]/div[2]/ul/li[1]/span",ValueReadType.INNER_TEXT)]
         public string VisionYear { get; set; }
     }
 }

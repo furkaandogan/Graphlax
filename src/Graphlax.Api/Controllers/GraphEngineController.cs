@@ -5,20 +5,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Graphlax.Api.Controllers
 {
-    public sealed class GraphSearcherController
+    public sealed class GraphEngineController
         : BaseController
     {
-        public GraphSearcherController()
+        public GraphEngineController()
         {
 
         }
-
-        [HttpGet("graph")]
-        public GraphObject Index(string url)
-        {
-            DefaultGraphSearcher defaultGraphSearcher=new DefaultGraphSearcher();
-            return defaultGraphSearcher.Search(new Uri(url));
-        }
+        
         [HttpGet("engine/graph")]
         public async Task<GraphObject> EngineAsync(string url)
         {

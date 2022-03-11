@@ -73,10 +73,10 @@ namespace Graphlax.Engine
                         }
                     break;
                     case ValueReadType.INNER_TEXT:
-                        value=htmlNode.InnerText.Trim();
+                        value=htmlNode?.InnerText?.Trim();
                     break;
                     default:
-                        value=htmlNode.InnerText.Trim();
+                        value=htmlNode?.InnerText?.Trim();
                     break;
                 }
             }
